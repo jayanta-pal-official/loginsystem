@@ -9,7 +9,7 @@ $login = false;
 $showError = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  include 'partials/_dbconnect.php';
+  include '_dbconnect.php';
   $email = $_POST["email"];
   $password = $_POST["password"];
 
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
   <?php
-  require 'partials/_nav.php'
+  require '_nav.php'
     ?>
   <?php
   if ($login) {

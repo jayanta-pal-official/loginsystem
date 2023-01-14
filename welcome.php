@@ -22,7 +22,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
 <body>
   <?php
-  require 'partials/_nav.php' ?>
+  require '_nav.php' ?>
   <div class="container my-5">
     <div class="alert alert-success" role="alert">
       <h4 class="alert-heading">welcome -<?php echo $_SESSION['email'] ?>!</h4>

@@ -16,7 +16,7 @@ $firstname_error = $middlename_error = $lastname_error = $email_error = $phone_n
 $firstname = $middlename = $lastname = $email = $phone_number = $password = $cpassword = $gender = $address = NULL;
 $flag = true;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  include 'partials/_dbconnect.php';
+  include '_dbconnect.php';
   if (empty($_POST['firstname'])) {
     $firstname_error = "** This field is required";
     $flag = false;
@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
   <?php
-  require 'partials/_nav.php'
+  require '_nav.php'
     ?>
   <?php if ($showAlert) { ?>
     <div class="alert alert-success alert-dismissible fade show" role="alert">
