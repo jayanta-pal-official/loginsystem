@@ -35,7 +35,6 @@ $gender_error = "";
 $country_error = "";
 $address_error = "";
 //all
-$flag = true;
 $error = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   include '_dbconnect.php';
@@ -74,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($email == "") {
-    $email_error = "User lastname can not be blank";
+    $email_error = "User email can not be blank";
     $error = true;
   } else {
     $email = clean_input($_POST["email"]);
@@ -84,21 +83,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if ($phone_number == "") {
-    $phone_number_error = "User lastname can not be blank";
+    $phone_number_error = "User phone number can not be blank";
     $error = true;
   } else {
     $phone_number = clean_input($_POST["phone_number"]);
   }
 
   if ($password == "") {
-    $password_error = "User lastname can not be blank";
+    $password_error = "User password can not be blank";
     $error = true;
   } else {
     $password = clean_input($_POST["password"]);
   }
 
   if ($cpassword == "") {
-    $cpassword_error = "User lastname can not be blank";
+    $cpassword_error = "User confirm password can not be blank";
     $error = true;
   } else {
     $cpassword = clean_input($_POST["cpassword"]);
@@ -106,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
   if ($gender == "") {
-    $gender_error = "User lastname can not be blank";
+    $gender_error = "User gender can not be blank";
     $error = true;
   } else {
     $gender = clean_input($_POST["gender"]);
